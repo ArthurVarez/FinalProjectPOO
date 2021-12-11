@@ -1,31 +1,29 @@
 package com.FinalProject.PatternManager;
 
 import com.FinalProject.Pattern.*;
+import com.FinalProject.Pattern.Factory.ImageWebObjectFactory;
 import com.FinalProject.Scrapper.*;
 import com.FinalProject.Logger.*;
+import com.FinalProject.WebObject.ImageWebObject;
 
 import java.util.*;
-import java.io.File;
-import java.io.IOException;
 
 public class PatternManager {
+    private List<IPattern> _patterns;
+    private PatternScrapperDictionnary _mapperpaterns;
+
     public PatternManager() {
-        _logger = new FileLogger("output.txt");
-        _scrapper = new ImgurScrapper("Super la data", 15, _logger);
         _patterns = Arrays.asList(
-            new OneTimePattern()
+                new OneTimePattern()
+                ,new ImageWebObjectFactory()
         );
+        _mapperpaterns = new PatternScrapperDictionnary(_patterns);
     }
 
-    public void start() {
-        for (IPattern pattern: _patterns) {
-            _scrapper.setCount(0);
-            pattern.setScrapper(_scrapper);
-            pattern.start();
+    public void start() throws NoSuchFieldException, IllegalAccessException {
+        for (PatternScapperEntry entry : _mapperpaterns.getEntries()) {
+            entry.getScrapper().setCount(0);
+            entry.getPattern().start();
         }
     }
-
-    private IWebScrapper _scrapper;
-    private ILogger _logger;
-    private List<IPattern> _patterns;
 }
