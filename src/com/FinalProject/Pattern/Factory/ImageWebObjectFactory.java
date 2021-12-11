@@ -16,7 +16,7 @@ public class ImageWebObjectFactory implements AFactory<ImageWebObject> {
     public void start(){
         Load(30);
         for (IWebObject obj: objects) {
-            obj.download("test/");
+            obj.download("test/"+this.getClass().getSimpleName());
         }
     }
 
@@ -31,8 +31,7 @@ public class ImageWebObjectFactory implements AFactory<ImageWebObject> {
     public void Load(int n) {
         for(int i =0;i<n;i++)
         {
-            List<String> __ = _scrapper.get_data();
-            CreateObject(__.get(0));
+            objects.add(CreateObject(_scrapper.get_data()));
         }
 
     }

@@ -48,6 +48,13 @@ public class ImageWebObject implements IWebObject {
      * Download the IWebObject in the *directory* with a generated name
      */
     public void download(String directory) {
+        File directory_name = new File(directory);
+        if (! directory_name.exists()){
+            directory_name.mkdir();
+            // If you require it to make the entire directory path including parents,
+            // use directory.mkdirs(); here instead.
+        }
+
         download(directory, "image_" + (++_count) + '.' + _extension);
     }
 }

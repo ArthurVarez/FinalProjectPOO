@@ -44,5 +44,5 @@ public interface IWebScrapper {
      */
     public long getCount();
 
-    List<String> get_data();
+   String get_data();
 }

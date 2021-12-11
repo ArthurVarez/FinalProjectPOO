@@ -18,7 +18,7 @@ public class OneTimePattern implements IPattern {
 
             while (_scrapper.load(objects, 27)) {
                 for (IWebObject obj: objects) {
-                    obj.download("test/");
+                    obj.download("test/"+this.getClass().getSimpleName());
                 }
                 objects.clear();
             }
