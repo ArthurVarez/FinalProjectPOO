@@ -51,8 +51,7 @@ public class ImageWebObject implements IWebObject {
         File directory_name = new File(directory);
         if (! directory_name.exists()){
             directory_name.mkdir();
-            // If you require it to make the entire directory path including parents,
-            // use directory.mkdirs(); here instead.
+
         }
 
         download(directory, "image_" + (++_count) + '.' + _extension);

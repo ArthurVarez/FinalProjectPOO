@@ -9,9 +9,9 @@ public class PatternScrapperDictionnary {
     private List<PatternScapperEntry> entries = new ArrayList<>();
 
     public PatternScrapperDictionnary(List<IPattern> entries) {
-        entries.forEach(this::AddEntrie);
+        entries.forEach(this::AddEntry);
     }
-    public void AddEntrie(IPattern pattern){
+    public void AddEntry(IPattern pattern){
         entries.add(new PatternScapperEntry(pattern));
 
     }
