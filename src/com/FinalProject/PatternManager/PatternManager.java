@@ -10,7 +10,7 @@ import java.util.*;
 
 public class PatternManager {
     private List<IPattern> _patterns;
-    private PatternScrapperDictionnary _mapperpaterns;
+    private final PatternScrapperDictionnary _mapperpaterns;
 
     public PatternManager() {
         _patterns = Arrays.asList(
