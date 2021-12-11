@@ -28,7 +28,7 @@ public abstract class AWebScrapper implements IWebScrapper {
     /**
      * Load all remaining IWebObject in *list*
      */
-    public boolean load(List<IWebObject> list) {
+    public boolean load(List<String> list) {
         return load(list, _maxCount - _count);
     }
 

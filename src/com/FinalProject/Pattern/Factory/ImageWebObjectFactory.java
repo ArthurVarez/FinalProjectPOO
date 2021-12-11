@@ -2,7 +2,7 @@ package com.FinalProject.Pattern.Factory;
 import com.FinalProject.Scrapper.IWebScrapper;
 import com.FinalProject.WebObject.*;
 
-
+import java.util.LinkedList;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
@@ -10,22 +10,15 @@ import java.util.logging.Logger;
 
 
 public class ImageWebObjectFactory implements AFactory<ImageWebObject> {
-    private static final Logger LOGGER = Logger.getLogger(ImageWebObjectFactory.class.getPackage().getName());
     private List<ImageWebObject> objects = new ArrayList();
     private IWebScrapper _scrapper;
 
     @Override
-    public void start(){
-        long startTime = System.currentTimeMillis();
-        LOGGER.info(this
-                    .getClass().getSimpleName()+" Started ");
-        Load(150);
+    public void start() {
+        Load();
         for (IWebObject obj: objects) {
             obj.download("test/"+this.getClass().getSimpleName());
         }
-        long endTime = System.currentTimeMillis();
-        LOGGER.info(this
-                .getClass().getSimpleName()+" took " + (endTime-startTime)+" milliseconds");
     }
 
     @Override
@@ -35,10 +28,12 @@ public class ImageWebObjectFactory implements AFactory<ImageWebObject> {
     public ImageWebObject CreateObject(String data) {
         return new ImageWebObject(data);
     }
-    public void Load(int n) {
-        for(int i =0;i<n;i++)
-        {
-            objects.add(CreateObject(_scrapper.get_data()));
+    public void Load() {
+        List<String> dataList = new LinkedList<String>();
+
+        _scrapper.load(dataList);
+        for (String data: dataList) {
+            objects.add(CreateObject(data));
         }
 
     }

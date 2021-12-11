@@ -11,12 +11,12 @@ public interface IWebScrapper {
      * Load the *count* next IScrapped in *list*
      * Return true if there is still IWebObject to load
      */
-    public boolean load(List<IWebObject> list, long count);
+    public boolean load(List<String> list, long count);
 
     /**
      * Load all IWebObject in *list*
      */
-    public boolean load(List<IWebObject> list);
+    public boolean load(List<String> list);
 
     /**
      * Set the logger
@@ -43,6 +43,4 @@ public interface IWebScrapper {
      * Return count
      */
     public long getCount();
-
-   String get_data();
 }
