@@ -10,7 +10,7 @@ import javax.imageio.ImageIO;
 public class ImageWebObject implements IWebObject {
     public ImageWebObject(String data) {
         _data = data;
-        _extension = _data.substring(_data.lastIndexOf('.') + 1).trim();
+        _extension = _data.substring(_data.lastIndexOf('.') + 1).trim().split("\\?")[0];
     }
 
     static long _count = 0;
@@ -38,7 +38,8 @@ public class ImageWebObject implements IWebObject {
             URL url = new URL(_data);
 
             image = ImageIO.read(url);
-            ImageIO.write(image, _extension, file);
+            if (image != null)
+                ImageIO.write(image, _extension, file);
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -13,7 +13,7 @@ public class PatternScapperEntry {
     public PatternScapperEntry(IPattern pattern) {
         _logger = new FileLogger("output.txt");
         this.pattern = pattern;
-        this.scrapper = new ImgurScrapper("Super la data", 150, _logger);
+        this.scrapper = new ImgurScrapper("cat", 150, _logger);
         this.pattern.setScrapper(this.scrapper);
     }
 
