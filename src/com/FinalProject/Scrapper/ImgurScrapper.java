@@ -66,8 +66,6 @@ public class ImgurScrapper extends AWebScrapper {
                             if (count-- <= 0)
                                 break;
                             list.add(new String(url));
-                            System.out.println(url);
-                            System.out.println(count);
                         }
                     }
                 }
@@ -76,9 +74,6 @@ public class ImgurScrapper extends AWebScrapper {
         } catch (Exception e) {
             e.printStackTrace();
         }
-//        for (long i = 0; i < count; ++i)
-//            list.add(new String(_data));
-            //todo changer 0 par l'index de lindex de la liste _data
         return ret;
     }
 }
