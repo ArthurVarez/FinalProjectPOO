@@ -1,4 +1,5 @@
 package com.FinalProject.Pattern.Factory;
+import com.FinalProject.Pattern.IPattern;
 import com.FinalProject.Scrapper.IWebScrapper;
 import com.FinalProject.WebObject.*;
 
@@ -9,7 +10,7 @@ import java.util.logging.Logger;
 
 
 
-public class ImageWebObjectFactory implements AFactory<ImageWebObject> {
+public class ImageWebObjectFactory implements AFactory<ImageWebObject>{
     private List<ImageWebObject> objects = new ArrayList();
     private IWebScrapper _scrapper;
 
@@ -28,6 +29,7 @@ public class ImageWebObjectFactory implements AFactory<ImageWebObject> {
     public ImageWebObject CreateObject(String data) {
         return new ImageWebObject(data);
     }
+
     public void Load() {
         List<String> dataList = new LinkedList<String>();
 

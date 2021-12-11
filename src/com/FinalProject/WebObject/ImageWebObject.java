@@ -13,6 +13,8 @@ public class ImageWebObject implements IWebObject {
         _extension = _data.substring(_data.lastIndexOf('.') + 1).trim();
     }
 
+
+
     static long _count = 0;
     private String _data;
     private String _extension;
