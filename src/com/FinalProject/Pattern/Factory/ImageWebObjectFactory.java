@@ -5,19 +5,27 @@ import com.FinalProject.WebObject.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
+
 
 
 public class ImageWebObjectFactory implements AFactory<ImageWebObject> {
-
+    private static final Logger LOGGER = Logger.getLogger(ImageWebObjectFactory.class.getPackage().getName());
     private List<ImageWebObject> objects = new ArrayList();
     private IWebScrapper _scrapper;
 
     @Override
     public void start(){
+        long startTime = System.currentTimeMillis();
+        LOGGER.info(this
+                    .getClass().getSimpleName()+" Started ");
         Load(30);
         for (IWebObject obj: objects) {
             obj.download("test/"+this.getClass().getSimpleName());
         }
+        long endTime = System.currentTimeMillis();
+        LOGGER.info(this
+                .getClass().getSimpleName()+" took " + (endTime-startTime)+" milliseconds");
     }
 
     @Override

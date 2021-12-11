@@ -10,17 +10,18 @@ import java.util.*;
 
 public class PatternManager {
     private List<IPattern> _patterns;
-    private PatternScrapperDictionnary _mapperpaterns;
+    private final PatternScrapperDictionnary _mapperpaterns;
 
     public PatternManager() {
         _patterns = Arrays.asList(
-                new OneTimePattern()
-                ,new ImageWebObjectFactory()
+               new ImageWebObjectFactory()
+                , new OneTimePattern()
+        
         );
         _mapperpaterns = new PatternScrapperDictionnary(_patterns);
     }
 
-    public void start() throws NoSuchFieldException, IllegalAccessException {
+    public void start() {
         for (PatternScapperEntry entry : _mapperpaterns.getEntries()) {
             entry.getScrapper().setCount(0);
             entry.getPattern().start();
