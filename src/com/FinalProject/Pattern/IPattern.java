@@ -8,7 +8,7 @@ public interface IPattern {
     /**
      * Start the processus of downloading
      */
-    public void start() throws NoSuchFieldException, IllegalAccessException;
+    public void start();
 
     /**
      * Start the processus of downloading
