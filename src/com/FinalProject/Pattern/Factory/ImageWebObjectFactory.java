@@ -19,7 +19,7 @@ public class ImageWebObjectFactory implements AFactory<ImageWebObject> {
         long startTime = System.currentTimeMillis();
         LOGGER.info(this
                     .getClass().getSimpleName()+" Started ");
-        Load(30);
+        Load(150);
         for (IWebObject obj: objects) {
             obj.download("test/"+this.getClass().getSimpleName());
         }
@@ -30,7 +30,6 @@ public class ImageWebObjectFactory implements AFactory<ImageWebObject> {
 
     @Override
     public void setScrapper(IWebScrapper scrapper) {_scrapper=scrapper;}
-
 
     @Override
     public ImageWebObject CreateObject(String data) {
