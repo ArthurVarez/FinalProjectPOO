@@ -43,4 +43,6 @@ public interface IWebScrapper {
      * Return count
      */
     public long getCount();
+
+    List<String> get_data();
 }
