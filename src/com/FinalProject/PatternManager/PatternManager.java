@@ -2,6 +2,7 @@ package com.FinalProject.PatternManager;
 
 import com.FinalProject.Pattern.*;
 import com.FinalProject.Pattern.Factory.*;
+import com.FinalProject.Pattern.FlyWeight.ImageFlyweightFactory;
 import com.FinalProject.Scrapper.*;
 import java.util.logging.Logger;
 import com.FinalProject.Logger.*;
@@ -17,7 +18,8 @@ public class PatternManager {
     public PatternManager() {
         _patterns = Arrays.asList(
                 new ImageWebObjectFactory(),
-                new OneTimePattern()
+                new OneTimePattern(),
+                new ImageFlyweightFactory("https://i.imgur.com")
         );
         _mapperpaterns = new PatternScrapperDictionnary(_patterns);
     }
