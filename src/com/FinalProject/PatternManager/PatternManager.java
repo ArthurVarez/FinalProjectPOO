@@ -14,8 +14,8 @@ import java.util.*;
 public class PatternManager {
     private List<IPattern> _patterns;
     private final PatternScrapperDictionnary _mapperpaterns;
-//    private static final Logger _logger = Logger.getLogger(PatternManager.class.getPackage().getName());
-    private ILogger _logger = new FileLogger("output.txt");
+    private static final Logger _logger = Logger.getLogger(PatternManager.class.getPackage().getName());
+    //private ILogger _logger = new FileLogger("output.txt");
     private PerformanceCalculator pf = new PerformanceCalculator();
 
     public PatternManager() {
@@ -31,12 +31,12 @@ public class PatternManager {
         _mapperpaterns.getEntries().forEach(e->
             {
                 e.getScrapper().setCount(0);
-                _logger.log("Pattern [" + e.getClass().getSimpleName() + "] Started ");
+                _logger.info("Pattern [" + e.getPattern().getClass().getSimpleName() + "] Started ");
                 pf.startTimer();
                 e.getPattern().start();
-                _logger.log("Pattern [" + e.getClass().getSimpleName() + "] weight " + pf.getProgramSize() + " bytes");
+                _logger.info("Pattern [" + e.getPattern().getClass().getSimpleName() + "] weight " + pf.getProgramSize() + " bytes");
                 pf.stopTimer();
-                _logger.log("Pattern [" + e.getClass().getSimpleName() + "] lasted " + pf.getElapsedTime() + " milliseconds");
+                _logger.info("Pattern [" + e.getPattern().getClass().getSimpleName() + "] lasted " + pf.getElapsedTime() + " milliseconds");
         });
     }
 }
