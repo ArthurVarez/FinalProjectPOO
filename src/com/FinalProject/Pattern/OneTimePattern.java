@@ -13,8 +13,17 @@ public class OneTimePattern implements IPattern {
     /**
      * Start the processus of downloading
      */
-    public void start() {
-        }
+
+
+    @Override
+    public void Load() {
+
+    }
+
+    @Override
+    public void Download() {
+
+    }
 
     /**
      * Start the processus of downloading

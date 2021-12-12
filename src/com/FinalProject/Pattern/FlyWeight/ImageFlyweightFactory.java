@@ -1,14 +1,10 @@
 package com.FinalProject.Pattern.FlyWeight;
 
-import com.FinalProject.Pattern.FlyWeight.ImageFormatFlyweight.ImageFormatType;
-import com.FinalProject.Pattern.FlyWeight.ImageFormatFlyweight.ImageGIFFlyWeight;
-import com.FinalProject.Pattern.FlyWeight.ImageFormatFlyweight.ImageJPEGFlyWeight;
-import com.FinalProject.Pattern.FlyWeight.ImageFormatFlyweight.ImagePNGFlyWeight;
-import com.FinalProject.Pattern.IPattern;
+import com.FinalProject.Pattern.FlyWeight.ImageFormatFlyweight.*;
+import com.FinalProject.Pattern.*;
 import com.FinalProject.Scrapper.IWebScrapper;
 import com.FinalProject.WebObject.ImageWebObject;
 
-import javax.xml.crypto.dsig.keyinfo.KeyValue;
 import java.util.*;
 
 public class ImageFlyweightFactory implements IPattern {
@@ -19,13 +15,18 @@ public class ImageFlyweightFactory implements IPattern {
 
     public ImageFlyweightFactory(String base_url) {
         this.base_url = base_url;
+
+    }
+    @Override
+    public void Load()
+    {
         flyweights.put(ImageFormatType.PNG,new ImagePNGFlyWeight(base_url));
         flyweights.put(ImageFormatType.JPEG,new ImageJPEGFlyWeight(base_url));
         flyweights.put(ImageFormatType.GIF,new ImageGIFFlyWeight(base_url));
     }
 
     @Override
-    public void start() {
+    public void Download() {
 
         List<String> urls = new ArrayList<>();
         _scrapper.load(urls);
@@ -65,8 +66,6 @@ public class ImageFlyweightFactory implements IPattern {
 
         }
     }
-
-
     @Override
     public void setScrapper(IWebScrapper scrapper) {
         this._scrapper = scrapper;

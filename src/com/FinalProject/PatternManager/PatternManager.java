@@ -31,12 +31,13 @@ public class PatternManager {
         _mapperpaterns.getEntries().forEach(e->
             {
                 e.getScrapper().setCount(0);
-                _logger.log("Pattern [" + e.getClass().getSimpleName() + "] Started ");
+                _logger.log("Pattern [" + e.getPattern().getClass().getSimpleName() + "] Started ");
                 pf.startTimer();
-                e.getPattern().start();
-                _logger.log("Pattern [" + e.getClass().getSimpleName() + "] weight " + pf.getProgramSize() + " bytes");
+                e.getPattern().Load();
+                _logger.log("Pattern [" + e.getPattern().getClass().getSimpleName() + "] weight " + pf.getProgramSize() + " bytes");
+                e.getPattern().Download();
                 pf.stopTimer();
-                _logger.log("Pattern [" + e.getClass().getSimpleName() + "] lasted " + pf.getElapsedTime() + " milliseconds");
+                _logger.log("Pattern [" + e.getPattern().getClass().getSimpleName() + "] lasted " + pf.getElapsedTime() + " milliseconds");
         });
     }
 }

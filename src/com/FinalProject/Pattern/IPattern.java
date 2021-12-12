@@ -8,10 +8,12 @@ public interface IPattern {
     /**
      * Start the processus of downloading
      */
-    public void start();
+    public void Load();
+    public void Download();
 
     /**
      * Start the processus of downloading
      */
     public void setScrapper(IWebScrapper scrapper);
+
 }

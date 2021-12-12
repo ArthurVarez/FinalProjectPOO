@@ -6,8 +6,6 @@ import com.FinalProject.WebObject.*;
 import java.util.LinkedList;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
-
 
 
 public class ImageWebObjectFactory implements AFactory<ImageWebObject>{
@@ -15,7 +13,7 @@ public class ImageWebObjectFactory implements AFactory<ImageWebObject>{
     private IWebScrapper _scrapper;
 
     @Override
-    public void start() {
+    public void Download() {
         Load();
         for (IWebObject obj: objects) {
             obj.download("test/"+this.getClass().getSimpleName());
@@ -30,6 +28,7 @@ public class ImageWebObjectFactory implements AFactory<ImageWebObject>{
         return new ImageWebObject(data);
     }
 
+    @Override
     public void Load() {
         List<String> dataList = new LinkedList<String>();
 
