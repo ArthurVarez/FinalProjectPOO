@@ -1,9 +1,9 @@
-[2021-12-11 20:25:18.265] Pattern [ImageWebObjectFactory] Started 
-[2021-12-11 20:25:19.645] Pattern [ImageWebObjectFactory] weight 5609352 bytes
-[2021-12-11 20:25:19.661] Pattern [ImageWebObjectFactory] lasted 1376 milliseconds
-[2021-12-11 20:25:19.663] Pattern [OneTimePattern] Started 
-[2021-12-11 20:25:19.675] Pattern [OneTimePattern] weight 5631584 bytes
-[2021-12-11 20:25:19.676] Pattern [OneTimePattern] lasted 13 milliseconds
-[2021-12-11 20:25:19.677] Pattern [ImageFlyweightFactory] Started 
-[2021-12-11 20:25:19.692] Pattern [ImageFlyweightFactory] weight 5635352 bytes
-[2021-12-11 20:25:20.135] Pattern [ImageFlyweightFactory] lasted 458 milliseconds
+[2021-12-11 21:01:45.456] Pattern [ImageFlyweightFactory] Started 
+[2021-12-11 21:01:45.504] Pattern [ImageFlyweightFactory] weight 2339824 bytes
+[2021-12-11 21:02:16.378] Pattern [ImageFlyweightFactory] lasted 30905 milliseconds
+[2021-12-11 21:02:16.379] Pattern [OneTimePattern] Started 
+[2021-12-11 21:02:16.395] Pattern [OneTimePattern] weight 5622096 bytes
+[2021-12-11 21:02:16.396] Pattern [OneTimePattern] lasted 17 milliseconds
+[2021-12-11 21:02:16.397] Pattern [ImageWebObjectFactory] Started 
+[2021-12-11 21:02:16.817] Pattern [ImageWebObjectFactory] weight 5820472 bytes
+[2021-12-11 21:02:43.125] Pattern [ImageWebObjectFactory] lasted 26727 milliseconds

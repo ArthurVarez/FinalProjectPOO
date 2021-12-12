@@ -19,4 +19,5 @@ public class PatternScrapperDictionnary {
     public List<PatternScapperEntry> getEntries() {
         return entries;
     }
+
 }

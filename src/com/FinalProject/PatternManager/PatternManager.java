@@ -4,9 +4,7 @@ import com.FinalProject.Pattern.*;
 import com.FinalProject.Pattern.Factory.*;
 import com.FinalProject.Performance.PerformanceCalculator;
 import com.FinalProject.Pattern.FlyWeight.ImageFlyweightFactory;
-import com.FinalProject.Performance.PerformanceCalculator;
 import com.FinalProject.Scrapper.*;
-import java.util.logging.Logger;
 import com.FinalProject.Logger.*;
 
 import java.util.*;
@@ -20,9 +18,9 @@ public class PatternManager {
 
     public PatternManager() {
         _patterns = Arrays.asList(
-                new ImageWebObjectFactory(),
+                new ImageFlyweightFactory("https://i.imgur.com"),
                 new OneTimePattern(),
-                new ImageFlyweightFactory("https://i.imgur.com")
+                new ImageWebObjectFactory()
         );
         _mapperpaterns = new PatternScrapperDictionnary(_patterns);
     }
@@ -38,6 +36,8 @@ public class PatternManager {
                 e.getPattern().Download();
                 pf.stopTimer();
                 _logger.log("Pattern [" + e.getPattern().getClass().getSimpleName() + "] lasted " + pf.getElapsedTime() + " milliseconds");
+                e=null;
+
         });
     }
 }
