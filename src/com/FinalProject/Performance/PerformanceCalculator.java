@@ -1,5 +1,8 @@
 package com.FinalProject.Performance;
 
+/**
+ * Class to calculate the performances of our patterns (time+memory usage)
+ */
 public class PerformanceCalculator {
     private static final long MEGABYTE = 1024L * 1024L;
     Runtime _runtime = Runtime.getRuntime();

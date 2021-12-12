@@ -5,42 +5,47 @@ import com.FinalProject.Logger.*;
 
 import java.util.*;
 
+/**
+ * Interface to specify what scrapper should use
+ */
 public interface IWebScrapper {
 
     /**
      * Load the *count* next IScrapped in *list*
      * Return true if there is still IWebObject to load
      */
-    public boolean load(List<String> list, long count);
+    boolean load(List<String> list, long count);
 
     /**
      * Load all IWebObject in *list*
      */
-    public boolean load(List<String> list);
+    boolean load(List<String> list);
+
 
     /**
      * Set the logger
      */
-    public void setLogger(ILogger logger);
+    //todo the following methods need to be deleted ?
+    void setLogger(ILogger logger);
 
     /**
      * Set max count of IWebObject to load
      */
-    public boolean setMaxCount(long maxCount);
+    boolean setMaxCount(long maxCount);
 
     /**
      * Set count
-     * Return false if *count* is under zero or superior than maxCount
+     * Return false if *count* is under zero or superior to maxCount
      */
-    public boolean setCount(long count);
+    boolean setCount(long count);
 
     /**
      * Return max count
      */
-    public long getMaxCount();
+    long getMaxCount();
 
     /**
      * Return count
      */
-    public long getCount();
+    long getCount();
 }

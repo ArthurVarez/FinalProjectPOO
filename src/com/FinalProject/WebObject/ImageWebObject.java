@@ -6,7 +6,9 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.net.URL;
 import javax.imageio.ImageIO;
-
+/**
+ * Class to create and manage WebObjects
+ */
 public class ImageWebObject implements IWebObject {
     public ImageWebObject(String data) {
         _data = data;

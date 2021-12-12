@@ -1,19 +1,23 @@
 package com.FinalProject.Scrapper;
 
+import com.FinalProject.Constants;
 import com.FinalProject.Logger.FileLogger;
 import com.FinalProject.Pattern.*;
 
-import java.util.logging.Logger;
+/**
+ * Class to map a pattern to a scrapper
+ */
 
-public class PatternScapperEntry {
+public class PatternScrapperEntry {
+
     private IWebScrapper scrapper;
     private IPattern pattern;
     FileLogger _logger ;
 
-    public PatternScapperEntry(IPattern pattern) {
+    public PatternScrapperEntry(IPattern pattern) {
         _logger = new FileLogger("output.txt");
         this.pattern = pattern;
-        this.scrapper = new ImgurScrapper("cat", 150, _logger);
+        this.scrapper = new ImgurScrapper(Constants.DataKind, Constants.DataNumber, _logger);
         this.pattern.setScrapper(this.scrapper);
     }
 

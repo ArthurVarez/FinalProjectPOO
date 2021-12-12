@@ -1,5 +1,8 @@
 package com.FinalProject.Pattern.FlyWeight;
 
+/**
+ * Abstract Flyweight class that stores the base_url shared to create Flyweights and the concrete objects
+ */
 public abstract class AImageFlyweight {
     protected String base_url;
 

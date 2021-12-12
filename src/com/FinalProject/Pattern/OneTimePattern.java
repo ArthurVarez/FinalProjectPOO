@@ -1,18 +1,16 @@
 package com.FinalProject.Pattern;
 
-import com.FinalProject.Pattern.Factory.ImageWebObjectFactory;
+
 import com.FinalProject.Scrapper.*;
 import com.FinalProject.WebObject.*;
-
 import java.util.*;
-import java.util.logging.Logger;
 
+/**
+ * This pattern is not a pattern, it's just a lazy loading and downloading implementation to show the impacts
+ * of the other patterns
+ */
 public class OneTimePattern implements IPattern {
     private IWebScrapper _scrapper = null;
-
-    /**
-     * Start the processus of downloading
-     */
 
 
     @Override
@@ -26,7 +24,7 @@ public class OneTimePattern implements IPattern {
     }
 
     /**
-     * Start the processus of downloading
+     * Start the processes of downloading
      */
     public void setScrapper(IWebScrapper scrapper) {
         _scrapper = scrapper;

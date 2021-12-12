@@ -2,18 +2,20 @@ package com.FinalProject.Pattern;
 
 import com.FinalProject.Scrapper.*;
 
-import java.util.*;
 
 public interface IPattern {
     /**
-     * Start the processus of downloading
+     * Load the data and construct Design Pattern behaviour
      */
-    public void Load();
-    public void Download();
+    void Load();
+    /**
+     * Save the object (images) in the folder designed
+     */
+    void Download();
 
     /**
-     * Start the processus of downloading
+     * Set the scrapper the pattern used
      */
-    public void setScrapper(IWebScrapper scrapper);
+    void setScrapper(IWebScrapper scrapper);
 
 }

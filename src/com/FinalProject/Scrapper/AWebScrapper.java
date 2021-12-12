@@ -1,10 +1,12 @@
 package com.FinalProject.Scrapper;
 
-import com.FinalProject.WebObject.*;
 import com.FinalProject.Logger.*;
 
 import java.util.*;
 
+/**
+ * Abstract that define the backbone of our scrappers
+ */
 public abstract class AWebScrapper implements IWebScrapper {
     public AWebScrapper(long maxCount, ILogger logger) {
         _maxCount = maxCount;
@@ -52,7 +54,7 @@ public abstract class AWebScrapper implements IWebScrapper {
 
     /**
      * Set max count
-     * Return false if *count* is under zero or superior than maxCount
+     * Return false if *count* is under zero or superior to maxCount
      */
     public boolean setCount(long count) {
         if (count < 0 || count > _maxCount )

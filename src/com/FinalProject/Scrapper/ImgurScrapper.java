@@ -1,23 +1,22 @@
 package com.FinalProject.Scrapper;
 
-import com.FinalProject.WebObject.*;
+
 import com.FinalProject.Logger.*;
-import java.net.HttpURLConnection;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse.*;
 import java.io.IOException;
-
 import java.util.*;
-
-import java.net.http.*;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+/**
+ * Class that scraps the Imgur website
+ */
+
 public class ImgurScrapper extends AWebScrapper {
-    private String _data = null;
+    private String _data;
     public ImgurScrapper(String data, long maxCount, ILogger logger) {
         super(maxCount, logger);
 
@@ -27,6 +26,9 @@ public class ImgurScrapper extends AWebScrapper {
     private int _pageCount = 0;
     private int _imageLoadedOnPage = 0;
 
+    /**
+     * todo a commenter
+     */
     private JSONArray getImagePage(int page) throws IOException, InterruptedException {
         var client = HttpClient.newHttpClient();
         var request = HttpRequest.newBuilder(
@@ -56,7 +58,8 @@ public class ImgurScrapper extends AWebScrapper {
 
                     try {
                         imageArray = gallery.getJSONArray("images");
-                    } catch (Exception e) {
+                    }
+                    catch (Exception e) {
                     }
 
                     if (imageArray != null) {
@@ -65,7 +68,7 @@ public class ImgurScrapper extends AWebScrapper {
                             String url = image.getString("link");
                             if (count-- <= 0)
                                 break;
-                            list.add(new String(url));
+                            list.add(url);
                         }
                     }
                 }
