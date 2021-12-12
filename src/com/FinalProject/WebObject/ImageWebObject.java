@@ -12,6 +12,10 @@ public class ImageWebObject implements IWebObject {
         _data = data;
         _extension = _data.substring(_data.lastIndexOf('.') + 1).trim().split("\\?")[0];
     }
+    public ImageWebObject(String data,String extension) {
+        _data = data;
+        _extension = extension;
+    }
 
 
 
