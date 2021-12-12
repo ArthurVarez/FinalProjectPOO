@@ -5,5 +5,5 @@ package com.FinalProject;
  */
 public class Constants {
     public final static String DataKind = "cat";
-    public final static long DataNumber= 150;
+    public final static long DataNumber= 50;
 }

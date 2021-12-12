@@ -1,9 +1,1 @@
-[2021-12-12 01:07:51.470] Pattern [ImageFlyweightFactory] Started 
-[2021-12-12 01:07:52.938] Pattern [ImageFlyweightFactory] weight 5550704 bytes
-[2021-12-12 01:07:52.939] Pattern [ImageFlyweightFactory] lasted 1454 milliseconds
-[2021-12-12 01:07:52.940] Pattern [OneTimePattern] Started 
-[2021-12-12 01:07:52.951] Pattern [OneTimePattern] weight 5558864 bytes
-[2021-12-12 01:07:52.952] Pattern [OneTimePattern] lasted 12 milliseconds
-[2021-12-12 01:07:52.953] Pattern [ImageWebObjectFactory] Started 
-[2021-12-12 01:07:53.489] Pattern [ImageWebObjectFactory] weight 5744560 bytes
-[2021-12-12 01:07:53.490] Pattern [ImageWebObjectFactory] lasted 537 milliseconds
+[2021-12-12 01:15:59.555] Pattern [ImageFlyweightFactory] Started 

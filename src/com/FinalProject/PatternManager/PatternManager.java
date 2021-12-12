@@ -39,8 +39,8 @@ public class PatternManager {
                 pf.startTimer();
                 e.getPattern().Load();
                 e.getPattern().Download();
-                _logger.log("Pattern [" + e.getPattern().getClass().getSimpleName() + "] weight " + pf.getProgramSize() + " bytes");
                 pf.stopTimer();
+                _logger.log("Pattern [" + e.getPattern().getClass().getSimpleName() + "] weight " + pf.getProgramSize() + " bytes");
                 _logger.log("Pattern [" + e.getPattern().getClass().getSimpleName() + "] lasted " + pf.getElapsedTime() + " milliseconds");
                 e=null;
 
