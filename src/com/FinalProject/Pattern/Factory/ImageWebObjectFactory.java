@@ -9,14 +9,13 @@ import java.util.List;
 
 
 public class ImageWebObjectFactory implements AFactory<ImageWebObject>{
-    private List<ImageWebObject> objects = new ArrayList();
+    private List<ImageWebObject> _objects = new LinkedList<>();
     private IWebScrapper _scrapper;
 
     @Override
     public void Download() {
-        Load();
-        for (IWebObject obj: objects) {
-            obj.download("test/"+this.getClass().getSimpleName());
+        while (!_objects.isEmpty()) {
+            _objects.remove(0).download("test/"+this.getClass().getSimpleName());
         }
     }
 
@@ -33,9 +32,9 @@ public class ImageWebObjectFactory implements AFactory<ImageWebObject>{
         List<String> dataList = new LinkedList<String>();
 
         _scrapper.load(dataList);
-        for (String data: dataList) {
-            objects.add(CreateObject(data));
+        while (!dataList.isEmpty()) {
+            _objects.add(CreateObject(dataList.remove(0)));
         }
-
+        dataList.clear();
     }
 }

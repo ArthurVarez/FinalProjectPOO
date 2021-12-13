@@ -1,8 +1,7 @@
 package com.FinalProject.Performance;
 
 public class PerformanceCalculator {
-    private static final long MEGABYTE = 1024L * 1024L;
-    Runtime _runtime = Runtime.getRuntime();
+    private static final long _megaByte = 1024L * 1024L;
     long _startTime = System.currentTimeMillis();
     long _stopTime = System.currentTimeMillis();
 
@@ -11,8 +10,8 @@ public class PerformanceCalculator {
     }
 
     public long getProgramSize() {
-        _runtime.gc();
-        return _runtime.totalMemory() - _runtime.freeMemory();
+        System.gc();
+        return Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
     }
 
     public void startTimer() {
@@ -28,6 +27,6 @@ public class PerformanceCalculator {
     }
 
     public static long bytesToMegabytes(long bytes) {
-        return bytes / MEGABYTE;
+        return bytes / _megaByte;
     }
 }

@@ -8,6 +8,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Properties;
+import com.FinalProject.Performance.PerformanceCalculator;
 
 public class Main {
 
@@ -21,12 +22,12 @@ public class Main {
 
  */
 
+        PerformanceCalculator pf = new PerformanceCalculator();
+        System.out.println(pf.getProgramSize());
         PatternManager manager = new PatternManager();
 
         manager.start();
-
-
-
-
+        manager = null;
+        System.out.println(pf.getProgramSize());
     }
 }

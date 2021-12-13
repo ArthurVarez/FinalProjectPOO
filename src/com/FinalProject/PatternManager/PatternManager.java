@@ -21,8 +21,7 @@ public class PatternManager {
     public PatternManager() {
         _patterns = Arrays.asList(
                 new ImageWebObjectFactory(),
-                new OneTimePattern(),
-                new ImageFlyweightFactory("https://i.imgur.com")
+                new ImageFlyweightFactory("https://i.imgur.com/")
         );
         _mapperpaterns = new PatternScrapperDictionnary(_patterns);
     }
