@@ -1,0 +1,39 @@
+\hypertarget{classcom_1_1FinalProject_1_1Logger_1_1FileLogger}{}\doxysection{com.\+Final\+Project.\+Logger.\+File\+Logger Class Reference}
+\label{classcom_1_1FinalProject_1_1Logger_1_1FileLogger}\index{com.FinalProject.Logger.FileLogger@{com.FinalProject.Logger.FileLogger}}
+
+
+Inheritance diagram for com.\+Final\+Project.\+Logger.\+File\+Logger\+:
+% FIG 0
+
+
+Collaboration diagram for com.\+Final\+Project.\+Logger.\+File\+Logger\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcom_1_1FinalProject_1_1Logger_1_1FileLogger_a061a2718c52c51551aafb6dd2385304e}\label{classcom_1_1FinalProject_1_1Logger_1_1FileLogger_a061a2718c52c51551aafb6dd2385304e}} 
+{\bfseries File\+Logger} (String file\+Path)
+\item 
+void \mbox{\hyperlink{classcom_1_1FinalProject_1_1Logger_1_1FileLogger_a222bfabc4546b12c9a66ae838d857b57}{log}} (String message)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Logger to edit a text file The logger to write in the text file the elapsed time for a design pattern to process and the resources used 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcom_1_1FinalProject_1_1Logger_1_1FileLogger_a222bfabc4546b12c9a66ae838d857b57}\label{classcom_1_1FinalProject_1_1Logger_1_1FileLogger_a222bfabc4546b12c9a66ae838d857b57}} 
+\index{com.FinalProject.Logger.FileLogger@{com.FinalProject.Logger.FileLogger}!log@{log}}
+\index{log@{log}!com.FinalProject.Logger.FileLogger@{com.FinalProject.Logger.FileLogger}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily void com.\+Final\+Project.\+Logger.\+File\+Logger.\+log (\begin{DoxyParamCaption}\item[{String}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Log the message given in parameter 
+
+Implements \mbox{\hyperlink{interfacecom_1_1FinalProject_1_1Logger_1_1ILogger}{com.\+Final\+Project.\+Logger.\+I\+Logger}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/com/\+Final\+Project/\+Logger/File\+Logger.\+java\end{DoxyCompactItemize}

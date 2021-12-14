@@ -1,5 +1,6 @@
 package com.FinalProject.PatternManager;
 
+import com.FinalProject.Constants;
 import com.FinalProject.Pattern.*;
 import com.FinalProject.Pattern.Factory.*;
 import com.FinalProject.Performance.PerformanceCalculator;
@@ -13,37 +14,31 @@ import java.util.*;
  */
 
 public class PatternManager {
-
-    // Here is a collection mapping the patterns to a scrapper
-    private final PatternScrapperDictionary _mapperpaterns;
-    private final ILogger _logger = new FileLogger("output.txt");
+    private final PatternScrapperDictionary _mapperPaterns;
+    private final ILogger _logger = new FileLogger(Constants.OutputFile);
     private final PerformanceCalculator pf = new PerformanceCalculator();
 
     public PatternManager() {
-        List<IPattern> _patterns = Arrays.asList(
+        List<IPattern> patterns = Arrays.asList(
                 new ImageFlyweightFactory("https://i.imgur.com"),
-                new OneTimePattern(),
-                new ImageWebObjectFactory()
-        );
-        _mapperpaterns = new PatternScrapperDictionary(_patterns);
+                new ImageWebObjectFactory());
+        _mapperPaterns = new PatternScrapperDictionary(patterns);
     }
 
     /**
      * Method to start the patterns and to log performances
      */
     public void start() {
-        _mapperpaterns.getEntries().forEach(e->
+        _mapperPaterns.getEntries().forEach(e->
             {
                 e.getScrapper().setCount(0);
                 _logger.log("Pattern [" + e.getPattern().getClass().getSimpleName() + "] Started ");
                 pf.startTimer();
                 e.getPattern().Load();
+                _logger.log("Pattern [" + e.getPattern().getClass().getSimpleName() + "] weight " + pf.getProgramSize() + " bytes");
                 e.getPattern().Download();
                 pf.stopTimer();
-                _logger.log("Pattern [" + e.getPattern().getClass().getSimpleName() + "] weight " + pf.getProgramSize() + " bytes");
                 _logger.log("Pattern [" + e.getPattern().getClass().getSimpleName() + "] lasted " + pf.getElapsedTime() + " milliseconds");
-                e=null;
-
         });
     }
 }

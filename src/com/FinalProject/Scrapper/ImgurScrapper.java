@@ -2,6 +2,8 @@ package com.FinalProject.Scrapper;
 
 
 import com.FinalProject.Logger.*;
+
+import java.io.FileInputStream;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -17,24 +19,26 @@ import org.json.JSONObject;
 
 public class ImgurScrapper extends AWebScrapper {
     private String _data;
-    public ImgurScrapper(String data, long maxCount, ILogger logger) {
+    public ImgurScrapper(String query, long maxCount, ILogger logger) {
         super(maxCount, logger);
 
-        _data=data;
+        _data=query;
     }
 
     private int _pageCount = 0;
     private int _imageLoadedOnPage = 0;
 
     /**
-     * todo a commenter
+     * Return all images from a page from imgur
      */
     private JSONArray getImagePage(int page) throws IOException, InterruptedException {
         var client = HttpClient.newHttpClient();
+        Properties properties = new Properties();
+        properties.load(new FileInputStream("config.properties"));
         var request = HttpRequest.newBuilder(
                         URI.create("https://api.imgur.com/3/gallery/search/time/all" + page + "?q=" + _data + "&q_type=jpg&q_type=png"))
                 .header("accept", "application/json")
-                .header("Authorization", "Client-ID 56dd1451c577189")
+                .header("Authorization", "Client-ID " + properties.getProperty("Client_id"))
                 .build();
         JSONObject response = new JSONObject(client.send(request, BodyHandlers.ofString()).body());
         return response.getJSONArray("data");

@@ -9,6 +9,9 @@ public abstract class AImageFlyweight {
     public AImageFlyweight(String base_url) {
         this.base_url = base_url;
     }
+    public String getImageUrl(String imageUrl) {
+        return imageUrl.concat(base_url).concat(getExtension());
+    }
     public abstract String getExtension();
 
 }

@@ -17,7 +17,7 @@ public class PatternScrapperEntry {
     public PatternScrapperEntry(IPattern pattern) {
         _logger = new FileLogger("output.txt");
         this.pattern = pattern;
-        this.scrapper = new ImgurScrapper(Constants.DataKind, Constants.DataNumber, _logger);
+        this.scrapper = new ImgurScrapper(Constants.Query, Constants.ImageNumber, _logger);
         this.pattern.setScrapper(this.scrapper);
     }
 

@@ -1,1 +1,0 @@
-[2021-12-12 01:15:59.555] Pattern [ImageFlyweightFactory] Started 

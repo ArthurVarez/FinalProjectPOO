@@ -1,0 +1,10 @@
+var searchData=
+[
+  ['setcount_75',['setCount',['../classcom_1_1FinalProject_1_1Scrapper_1_1AWebScrapper.html#afd96471c7e6609fb2b044d658d1a0895',1,'com.FinalProject.Scrapper.AWebScrapper.setCount()'],['../interfacecom_1_1FinalProject_1_1Scrapper_1_1IWebScrapper.html#a7dee010c6a9a11e75c175b9d62450500',1,'com.FinalProject.Scrapper.IWebScrapper.setCount()']]],
+  ['setlogger_76',['setLogger',['../classcom_1_1FinalProject_1_1Scrapper_1_1AWebScrapper.html#a81b36ec90843e1ffc5872885174998fb',1,'com.FinalProject.Scrapper.AWebScrapper.setLogger()'],['../interfacecom_1_1FinalProject_1_1Scrapper_1_1IWebScrapper.html#a9d7a3981944f5fcb01c20068caf06b93',1,'com.FinalProject.Scrapper.IWebScrapper.setLogger()']]],
+  ['setmaxcount_77',['setMaxCount',['../classcom_1_1FinalProject_1_1Scrapper_1_1AWebScrapper.html#acaa5cb5d7cc6b60de71c3e7064f0df34',1,'com.FinalProject.Scrapper.AWebScrapper.setMaxCount()'],['../interfacecom_1_1FinalProject_1_1Scrapper_1_1IWebScrapper.html#a3c560c5a7f3017b603f67486fdcb97b2',1,'com.FinalProject.Scrapper.IWebScrapper.setMaxCount()']]],
+  ['setscrapper_78',['setScrapper',['../classcom_1_1FinalProject_1_1Pattern_1_1FlyWeight_1_1ImageFlyweightFactory.html#a620374a83e7c03275c991863bf12aedc',1,'com.FinalProject.Pattern.FlyWeight.ImageFlyweightFactory.setScrapper()'],['../interfacecom_1_1FinalProject_1_1Pattern_1_1IPattern.html#accaf6e4b51325d37fa8470fea61acf42',1,'com.FinalProject.Pattern.IPattern.setScrapper()']]],
+  ['start_79',['start',['../classcom_1_1FinalProject_1_1PatternManager_1_1PatternManager.html#a290d71e84fe3d7836515d03032eb53d9',1,'com::FinalProject::PatternManager::PatternManager']]],
+  ['starttimer_80',['startTimer',['../classcom_1_1FinalProject_1_1Performance_1_1PerformanceCalculator.html#aa1d6aeaf814adf59bc11f99184a1fff5',1,'com::FinalProject::Performance::PerformanceCalculator']]],
+  ['stoptimer_81',['stopTimer',['../classcom_1_1FinalProject_1_1Performance_1_1PerformanceCalculator.html#aef5ae0f7480c307dbc606a6e705dfdc5',1,'com::FinalProject::Performance::PerformanceCalculator']]]
+];

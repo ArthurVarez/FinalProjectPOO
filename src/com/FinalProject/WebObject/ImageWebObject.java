@@ -19,8 +19,6 @@ public class ImageWebObject implements IWebObject {
         _extension = extension;
     }
 
-
-
     static long _count = 0;
     private String _data;
     private String _extension;

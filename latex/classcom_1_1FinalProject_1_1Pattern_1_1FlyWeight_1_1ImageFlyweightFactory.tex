@@ -1,0 +1,80 @@
+\hypertarget{classcom_1_1FinalProject_1_1Pattern_1_1FlyWeight_1_1ImageFlyweightFactory}{}\doxysection{com.\+Final\+Project.\+Pattern.\+Fly\+Weight.\+Image\+Flyweight\+Factory Class Reference}
+\label{classcom_1_1FinalProject_1_1Pattern_1_1FlyWeight_1_1ImageFlyweightFactory}\index{com.FinalProject.Pattern.FlyWeight.ImageFlyweightFactory@{com.FinalProject.Pattern.FlyWeight.ImageFlyweightFactory}}
+
+
+Inheritance diagram for com.\+Final\+Project.\+Pattern.\+Fly\+Weight.\+Image\+Flyweight\+Factory\+:
+% FIG 0
+
+
+Collaboration diagram for com.\+Final\+Project.\+Pattern.\+Fly\+Weight.\+Image\+Flyweight\+Factory\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcom_1_1FinalProject_1_1Pattern_1_1FlyWeight_1_1ImageFlyweightFactory_a007929c0dba55496f9b578b4eea55d79}\label{classcom_1_1FinalProject_1_1Pattern_1_1FlyWeight_1_1ImageFlyweightFactory_a007929c0dba55496f9b578b4eea55d79}} 
+{\bfseries Image\+Flyweight\+Factory} (String base\+Url)
+\item 
+void \mbox{\hyperlink{classcom_1_1FinalProject_1_1Pattern_1_1FlyWeight_1_1ImageFlyweightFactory_a20775c8b4411fd741d8724c0667383fa}{Load}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1FinalProject_1_1Pattern_1_1FlyWeight_1_1ImageFlyweightFactory_abdfc1ecc3d25d1348c33d22fbeac6e8d}{Download}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1FinalProject_1_1Pattern_1_1FlyWeight_1_1ImageFlyweightFactory_a620374a83e7c03275c991863bf12aedc}{set\+Scrapper}} (\mbox{\hyperlink{interfacecom_1_1FinalProject_1_1Scrapper_1_1IWebScrapper}{I\+Web\+Scrapper}} scrapper)
+\item 
+\mbox{\hyperlink{classcom_1_1FinalProject_1_1Pattern_1_1FlyWeight_1_1AImageFlyweight}{A\+Image\+Flyweight}} \mbox{\hyperlink{classcom_1_1FinalProject_1_1Pattern_1_1FlyWeight_1_1ImageFlyweightFactory_ad00a4f898d35ee59417fc09a9552ea62}{get\+Light\+Image}} (String url)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classcom_1_1FinalProject_1_1Pattern_1_1FlyWeight_1_1ImageFlyweightFactory_ab2cf089266b9c78fea94437e634c4a9c}\label{classcom_1_1FinalProject_1_1Pattern_1_1FlyWeight_1_1ImageFlyweightFactory_ab2cf089266b9c78fea94437e634c4a9c}} 
+List$<$ \mbox{\hyperlink{classcom_1_1FinalProject_1_1Pattern_1_1FlyWeight_1_1AImageFlyweight}{A\+Image\+Flyweight}} $>$ {\bfseries \+\_\+flyweights} = new Linked\+List$<$$>$()
+\item 
+\mbox{\Hypertarget{classcom_1_1FinalProject_1_1Pattern_1_1FlyWeight_1_1ImageFlyweightFactory_a50d0143ffc9e313f1b027b9f82ef5330}\label{classcom_1_1FinalProject_1_1Pattern_1_1FlyWeight_1_1ImageFlyweightFactory_a50d0143ffc9e313f1b027b9f82ef5330}} 
+String {\bfseries \+\_\+base\+Url}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Factory to create Flyweight in order to instantiate concrete object and then to save the images Here the goal is to share similar data in order to reduce memory usage 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcom_1_1FinalProject_1_1Pattern_1_1FlyWeight_1_1ImageFlyweightFactory_abdfc1ecc3d25d1348c33d22fbeac6e8d}\label{classcom_1_1FinalProject_1_1Pattern_1_1FlyWeight_1_1ImageFlyweightFactory_abdfc1ecc3d25d1348c33d22fbeac6e8d}} 
+\index{com.FinalProject.Pattern.FlyWeight.ImageFlyweightFactory@{com.FinalProject.Pattern.FlyWeight.ImageFlyweightFactory}!Download@{Download}}
+\index{Download@{Download}!com.FinalProject.Pattern.FlyWeight.ImageFlyweightFactory@{com.FinalProject.Pattern.FlyWeight.ImageFlyweightFactory}}
+\doxysubsubsection{\texorpdfstring{Download()}{Download()}}
+{\footnotesize\ttfamily void com.\+Final\+Project.\+Pattern.\+Fly\+Weight.\+Image\+Flyweight\+Factory.\+Download (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Method to create concrete object depending on the format founded 
+
+Implements \mbox{\hyperlink{interfacecom_1_1FinalProject_1_1Pattern_1_1IPattern_a25b10672fc9c5f3deefe6601bda20d4a}{com.\+Final\+Project.\+Pattern.\+I\+Pattern}}.
+
+\mbox{\Hypertarget{classcom_1_1FinalProject_1_1Pattern_1_1FlyWeight_1_1ImageFlyweightFactory_ad00a4f898d35ee59417fc09a9552ea62}\label{classcom_1_1FinalProject_1_1Pattern_1_1FlyWeight_1_1ImageFlyweightFactory_ad00a4f898d35ee59417fc09a9552ea62}} 
+\index{com.FinalProject.Pattern.FlyWeight.ImageFlyweightFactory@{com.FinalProject.Pattern.FlyWeight.ImageFlyweightFactory}!getLightImage@{getLightImage}}
+\index{getLightImage@{getLightImage}!com.FinalProject.Pattern.FlyWeight.ImageFlyweightFactory@{com.FinalProject.Pattern.FlyWeight.ImageFlyweightFactory}}
+\doxysubsubsection{\texorpdfstring{getLightImage()}{getLightImage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcom_1_1FinalProject_1_1Pattern_1_1FlyWeight_1_1AImageFlyweight}{A\+Image\+Flyweight}} com.\+Final\+Project.\+Pattern.\+Fly\+Weight.\+Image\+Flyweight\+Factory.\+get\+Light\+Image (\begin{DoxyParamCaption}\item[{String}]{url }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create an \mbox{\hyperlink{classcom_1_1FinalProject_1_1Pattern_1_1FlyWeight_1_1AImageFlyweight}{A\+Image\+Flyweight}} by the url of the image \mbox{\Hypertarget{classcom_1_1FinalProject_1_1Pattern_1_1FlyWeight_1_1ImageFlyweightFactory_a20775c8b4411fd741d8724c0667383fa}\label{classcom_1_1FinalProject_1_1Pattern_1_1FlyWeight_1_1ImageFlyweightFactory_a20775c8b4411fd741d8724c0667383fa}} 
+\index{com.FinalProject.Pattern.FlyWeight.ImageFlyweightFactory@{com.FinalProject.Pattern.FlyWeight.ImageFlyweightFactory}!Load@{Load}}
+\index{Load@{Load}!com.FinalProject.Pattern.FlyWeight.ImageFlyweightFactory@{com.FinalProject.Pattern.FlyWeight.ImageFlyweightFactory}}
+\doxysubsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily void com.\+Final\+Project.\+Pattern.\+Fly\+Weight.\+Image\+Flyweight\+Factory.\+Load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creating to different flyweight for processing the web data 
+
+Implements \mbox{\hyperlink{interfacecom_1_1FinalProject_1_1Pattern_1_1IPattern_a816030d547b9281e9548e2738d68271b}{com.\+Final\+Project.\+Pattern.\+I\+Pattern}}.
+
+\mbox{\Hypertarget{classcom_1_1FinalProject_1_1Pattern_1_1FlyWeight_1_1ImageFlyweightFactory_a620374a83e7c03275c991863bf12aedc}\label{classcom_1_1FinalProject_1_1Pattern_1_1FlyWeight_1_1ImageFlyweightFactory_a620374a83e7c03275c991863bf12aedc}} 
+\index{com.FinalProject.Pattern.FlyWeight.ImageFlyweightFactory@{com.FinalProject.Pattern.FlyWeight.ImageFlyweightFactory}!setScrapper@{setScrapper}}
+\index{setScrapper@{setScrapper}!com.FinalProject.Pattern.FlyWeight.ImageFlyweightFactory@{com.FinalProject.Pattern.FlyWeight.ImageFlyweightFactory}}
+\doxysubsubsection{\texorpdfstring{setScrapper()}{setScrapper()}}
+{\footnotesize\ttfamily void com.\+Final\+Project.\+Pattern.\+Fly\+Weight.\+Image\+Flyweight\+Factory.\+set\+Scrapper (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfacecom_1_1FinalProject_1_1Scrapper_1_1IWebScrapper}{I\+Web\+Scrapper}}}]{scrapper }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the scrapper the pattern used 
+
+Implements \mbox{\hyperlink{interfacecom_1_1FinalProject_1_1Pattern_1_1IPattern_accaf6e4b51325d37fa8470fea61acf42}{com.\+Final\+Project.\+Pattern.\+I\+Pattern}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/com/\+Final\+Project/\+Pattern/\+Fly\+Weight/Image\+Flyweight\+Factory.\+java\end{DoxyCompactItemize}
