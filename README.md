@@ -23,7 +23,7 @@ Le projet peut être lancé via un IDE adapté à Java tels que Eclipse ou Intel
 
 Une fois lancé, le programme va télécharger des images dans les dossier **[ImageWebObjectFactory](ImageWebObjectFactory)** et **[ImageFlyweightFactory](ImageFlyweightFactory)**.
 
-Les paramètres du programme peuvent être modifiés en changeant les variables du fichier **[Constants.java](Constants.java)**:
+Les paramètres du programme peuvent être modifiés en changeant les variables du fichier **[src/com/FinalProject/Constants.java](src/com/FinalProject/Constants.java)**:
 - **Query** est l'argument de recherche d'images sur l'API d'Imgur
 - **OutputFile** est le fichier de sortie du logger
 - **ImageNumber** est le nombre d'Images à télécharger
