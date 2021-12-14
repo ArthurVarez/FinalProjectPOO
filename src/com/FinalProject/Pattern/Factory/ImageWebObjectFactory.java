@@ -19,7 +19,7 @@ public class ImageWebObjectFactory implements AFactory<ImageWebObject>{
     @Override
     public void Download() {
         while (!_objects.isEmpty()) {
-            _objects.remove(0).download("test/"+this.getClass().getSimpleName());
+            _objects.remove(0).download(this.getClass().getSimpleName());
         }
     }
 

@@ -20,7 +20,7 @@ public class PatternManager {
 
     public PatternManager() {
         List<IPattern> patterns = Arrays.asList(
-                new ImageFlyweightFactory("https://i.imgur.com"),
+                new ImageFlyweightFactory("https://i.imgur.com/"),
                 new ImageWebObjectFactory());
         _mapperPaterns = new PatternScrapperDictionary(patterns);
     }

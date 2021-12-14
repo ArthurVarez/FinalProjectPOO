@@ -6,5 +6,5 @@ package com.FinalProject;
 public class Constants {
     public final static String Query = "cat";
     public final static String OutputFile = "output.txt";
-    public final static long ImageNumber = 50;
+    public final static long ImageNumber = 200;
 }

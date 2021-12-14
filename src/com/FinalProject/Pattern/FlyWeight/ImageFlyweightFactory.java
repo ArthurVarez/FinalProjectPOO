@@ -48,7 +48,7 @@ public class ImageFlyweightFactory implements IPattern {
             String url = lightImage.getImageUrl(_baseUrl);
             IWebObject image = new ImageWebObject(url);
 
-            image.download("test/" + this.getClass().getSimpleName());
+            image.download(this.getClass().getSimpleName());
         }
         _flyweights = null;
     }
